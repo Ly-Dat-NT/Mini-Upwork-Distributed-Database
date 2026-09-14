@@ -8,63 +8,7 @@ Các sơ đồ mô tả thiết kế dự kiến, chưa thể hiện lược đ�
 
 ## 1. Tổng quan các nhóm thực thể
 
-```mermaid
-flowchart TB
-    subgraph Identity["Tài khoản và hồ sơ"]
-        U["USER"]
-        C["CLIENT"]
-        F["FREELANCER"]
-        U --> C
-        U --> F
-    end
-    subgraph Marketplace["Công việc và đề xuất"]
-        CAT["CATEGORY"]
-        S["SKILL"]
-        FS["FREELANCER_SKILL"]
-        J["JOB"]
-        FJ["FIXED_PRICE_JOB"]
-        HJ["HOURLY_JOB"]
-        JS["JOB_SKILL"]
-        P["PROPOSAL"]
-        CAT --> J
-        F --> FS
-        S --> FS
-        S --> JS
-        J --> JS
-        J --> FJ
-        J --> HJ
-        J --> P
-        F --> P
-    end
-    subgraph Execution["Hợp đồng và thực hiện"]
-        CT["CONTRACT"]
-        FC["FIXED_PRICE_CONTRACT"]
-        HC["HOURLY_CONTRACT"]
-        M["MILESTONE"]
-        T["TIME_ENTRY"]
-        I["WEEKLY_INVOICE"]
-        CT --> FC
-        CT --> HC
-        FC --> M
-        HC --> T
-        HC --> I
-        I --> T
-    end
-    subgraph Settlement["Thanh toán và đánh giá"]
-        E["ESCROW_FUNDING"]
-        PAY["PAYMENT_TRANSACTION"]
-        R["REVIEW"]
-        RS["RATING_SUMMARY"]
-        M --> E
-        E --> PAY
-        I --> PAY
-        CT --> PAY
-        CT --> R
-        R -.-> RS
-    end
-    C --> J
-    P --> CT
-```
+![Sơ đồ thiết kế khái niệm](images/conceptual_erd.png)
 
 Mũi tên tổng quan biểu thị liên hệ giữa các nhóm, không biểu thị lực lượng quan hệ hoặc thứ tự xử lý. Góc nhìn này không vẽ mọi quan hệ payer/payee và reviewer/reviewee để giữ dễ đọc.
 
