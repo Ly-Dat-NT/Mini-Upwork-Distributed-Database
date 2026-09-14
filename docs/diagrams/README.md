@@ -25,7 +25,7 @@ Mũi tên tổng quan biểu thị liên hệ giữa các nhóm, không biểu t
 
 ## 3. Hợp đồng, công việc, thanh toán và đánh giá
 
-![Tổng quan các nhóm thực thể](images/d2.png)
+![Tổng quan các nhóm thực thể](d2v2.png)
 
 - CONTRACT → FIXED_PRICE_CONTRACT/HOURLY_CONTRACT: **total, disjoint** và phải khớp loại job.
 - Hợp đồng trọn gói phải có ít nhất một milestone trước ACTIVE; tổng số tiền milestone phải bằng agreed_amount.
