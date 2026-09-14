@@ -22,13 +22,13 @@ Chỉ bổ sung hướng dẫn cài đặt khi có lệnh chạy thực tế và
 
 | Kịch bản | Kết quả mong đợi khi triển khai |
 
-| Hợp đồng trọn gói | Milestone và escrow hợp lệ; thanh toán tham chiếu funding; không có time entry hoặc invoice theo giờ |
-| Hợp đồng theo giờ | Thời gian không chồng lấn; hóa đơn tính đúng; thanh toán tham chiếu invoice |
-| Người dùng hai vai trò | Được đăng việc và ứng tuyển việc khác; bị từ chối khi tự ứng tuyển |
-| Proposal không hợp lệ | Từ chối bản ghi trùng cặp freelancer–job và ứng tuyển job chưa OPEN |
-| Nguồn thanh toán sai | Từ chối khi có cả hai nguồn, không có nguồn hoặc nguồn khác hợp đồng |
-| Bên giao dịch và điều chỉnh | Từ chối bên không thuộc hợp đồng; bảo vệ giao dịch thành công khỏi sửa trực tiếp |
-| Review không hợp lệ | Từ chối người ngoài hợp đồng, đánh giá sớm và đánh giá trùng |
+- Hợp đồng trọn gói | Milestone và escrow hợp lệ; thanh toán tham chiếu funding; không có time entry hoặc invoice theo giờ |
+- Hợp đồng theo giờ | Thời gian không chồng lấn; hóa đơn tính đúng; thanh toán tham chiếu invoice |
+- Người dùng hai vai trò | Được đăng việc và ứng tuyển việc khác; bị từ chối khi tự ứng tuyển |
+- Proposal không hợp lệ | Từ chối bản ghi trùng cặp freelancer–job và ứng tuyển job chưa OPEN |
+- Nguồn thanh toán sai | Từ chối khi có cả hai nguồn, không có nguồn hoặc nguồn khác hợp đồng |
+- Bên giao dịch và điều chỉnh | Từ chối bên không thuộc hợp đồng; bảo vệ giao dịch thành công khỏi sửa trực tiếp |
+- Review không hợp lệ | Từ chối người ngoài hợp đồng, đánh giá sớm và đánh giá trùng |
 
 Các kết quả trong bảng là kỳ vọng từ mục 2.6 của báo cáo; chưa có bài kiểm thử được chạy.
 
