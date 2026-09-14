@@ -8,7 +8,7 @@ Các sơ đồ mô tả thiết kế dự kiến, chưa thể hiện lược đ�
 
 ## 1. Tổng quan các nhóm thực thể
 
-![Sơ đồ thiết kế khái niệm](images/conceptual_erd.png)
+![Sơ đồ thiết kế khái niệm](conceptual_erd.png)
 
 Mũi tên tổng quan biểu thị liên hệ giữa các nhóm, không biểu thị lực lượng quan hệ hoặc thứ tự xử lý. Góc nhìn này không vẽ mọi quan hệ payer/payee và reviewer/reviewee để giữ dễ đọc.
 
