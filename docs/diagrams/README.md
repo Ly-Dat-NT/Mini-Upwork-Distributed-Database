@@ -8,13 +8,13 @@ Các sơ đồ mô tả thiết kế dự kiến, chưa thể hiện lược đ�
 
 ## 1. Tổng quan các nhóm thực thể
 
-![Sơ đồ thiết kế khái niệm](conceptual_erd.png)
+![Sơ đồ thiết kế khái niệm](images/conceptual_erd.png)
 
 Mũi tên tổng quan biểu thị liên hệ giữa các nhóm, không biểu thị lực lượng quan hệ hoặc thứ tự xử lý. Góc nhìn này không vẽ mọi quan hệ payer/payee và reviewer/reviewee để giữ dễ đọc.
 
 ## 2. Marketplace, kỹ năng và proposal
 
-![Tổng quan các nhóm thực thể](d1.png)
+![Tổng quan các nhóm thực thể](images/d1.png)
 
 - USER → CLIENT/FREELANCER: **total, overlapping**; mỗi user có ít nhất một vai trò, có thể có cả hai.
 - JOB → FIXED_PRICE_JOB/HOURLY_JOB: **total, disjoint**; mỗi job thuộc đúng một loại.
@@ -25,7 +25,7 @@ Mũi tên tổng quan biểu thị liên hệ giữa các nhóm, không biểu t
 
 ## 3. Hợp đồng, công việc, thanh toán và đánh giá
 
-![Tổng quan các nhóm thực thể](d2.png)
+![Tổng quan các nhóm thực thể](images/d2.png)
 
 - CONTRACT → FIXED_PRICE_CONTRACT/HOURLY_CONTRACT: **total, disjoint** và phải khớp loại job.
 - Hợp đồng trọn gói phải có ít nhất một milestone trước ACTIVE; tổng số tiền milestone phải bằng agreed_amount.
