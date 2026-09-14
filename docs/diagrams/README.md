@@ -14,23 +14,7 @@ Mũi tên tổng quan biểu thị liên hệ giữa các nhóm, không biểu t
 
 ## 2. Marketplace, kỹ năng và proposal
 
-```mermaid
-classDiagram
-    USER <|-- CLIENT
-    USER <|-- FREELANCER
-    JOB <|-- FIXED_PRICE_JOB
-    JOB <|-- HOURLY_JOB
-    CLIENT "1" --> "0..*" JOB : posts
-    CATEGORY "0..1" --> "0..*" CATEGORY : parent_of
-    CATEGORY "1" --> "0..*" JOB : classifies
-    FREELANCER "1" --> "0..*" FREELANCER_SKILL : has
-    SKILL "1" --> "0..*" FREELANCER_SKILL : identifies
-    JOB "1" --> "0..*" JOB_SKILL : requires
-    SKILL "1" --> "0..*" JOB_SKILL : identifies
-    FREELANCER "1" --> "0..*" PROPOSAL : submits
-    JOB "1" --> "0..*" PROPOSAL : receives
-    PROPOSAL "1" --> "0..1" CONTRACT : creates
-```
+![Tổng quan các nhóm thực thể](d1v2.drawio.png)
 
 - USER → CLIENT/FREELANCER: **total, overlapping**; mỗi user có ít nhất một vai trò, có thể có cả hai.
 - JOB → FIXED_PRICE_JOB/HOURLY_JOB: **total, disjoint**; mỗi job thuộc đúng một loại.
@@ -41,26 +25,7 @@ classDiagram
 
 ## 3. Hợp đồng, công việc, thanh toán và đánh giá
 
-```mermaid
-classDiagram
-    CONTRACT <|-- FIXED_PRICE_CONTRACT
-    CONTRACT <|-- HOURLY_CONTRACT
-    FIXED_PRICE_CONTRACT "1" --> "0..*" MILESTONE : contains
-    HOURLY_CONTRACT "1" --> "0..*" TIME_ENTRY : records
-    HOURLY_CONTRACT "1" --> "0..*" WEEKLY_INVOICE : bills
-    WEEKLY_INVOICE "0..1" --> "1..*" TIME_ENTRY : summarizes
-    MILESTONE "1" --> "0..*" ESCROW_FUNDING : funding_history
-    CONTRACT "1" --> "0..*" PAYMENT_TRANSACTION : owns
-    ESCROW_FUNDING "0..1" --> "0..*" PAYMENT_TRANSACTION : source_A
-    WEEKLY_INVOICE "0..1" --> "0..*" PAYMENT_TRANSACTION : source_B
-    USER "1" --> "0..*" PAYMENT_TRANSACTION : payer
-    USER "1" --> "0..*" PAYMENT_TRANSACTION : payee
-    PAYMENT_TRANSACTION "0..1" --> "0..*" PAYMENT_TRANSACTION : original_for_correction
-    CONTRACT "1" --> "0..2" REVIEW : permits
-    USER "1" --> "0..*" REVIEW : reviewer
-    USER "1" --> "0..*" REVIEW : reviewee
-    USER "1" --> "0..1" RATING_SUMMARY : has
-```
+![Tổng quan các nhóm thực thể](D2.drawio.png)
 
 - CONTRACT → FIXED_PRICE_CONTRACT/HOURLY_CONTRACT: **total, disjoint** và phải khớp loại job.
 - Hợp đồng trọn gói phải có ít nhất một milestone trước ACTIVE; tổng số tiền milestone phải bằng agreed_amount.
