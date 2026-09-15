@@ -78,6 +78,7 @@ Mục tiêu tìm kiếm dưới 2 giây với 10.000 jobs và 50.000 proposals t
 └── docs/
     ├── implementation-plan.md
     ├── diagrams/
+    │   └── images/
     │   └── README.md
     └── report/
         └── Project_Report_DB.docx
